@@ -24,9 +24,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "C:/Users/anato/OneDrive/Documents/bootstrap-4.3.1-dist/css/bootstrap.min.css",
+              "node_modules/vendor/bootstrap/css/bootstrap.min.css",
+              "node_modules/css/orionicons.css",
+              "node_modules/css/style.default.css",
+              "node_modules/css/custom.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/vendor/jquery/jquery.min.js",
+              "node_modules/vendor/popper.js/umd/popper.min.js",
+              "node_modules/vendor/bootstrap/js/bootstrap.min.js",
+              "node_modules/vendor/jquery.cookie/jquery.cookie.js",
+              "node_modules/vendor/chart.js/Chart.min.js",
+              "node_modules/js/charts-home.js",
+              "node_modules/js/front.js"
+            ]
           },
           "configurations": {
             "production": {

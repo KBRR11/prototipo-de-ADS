@@ -1,0 +1,36 @@
+<section class="py-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="text-uppercase mb-0">Listado de Autores</h6>
+              </div>
+              <div class="card-body">                          
+                <table class="table table-striped table-sm card-text">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>NOMBRE</th>
+                      <th>APELLIDO</th>
+                      
+                     <th colspan="2">OPCIÓN</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                     <tr *ngFor="let au of autores">
+                            <td>{{au.idautor}}</td>
+                           <td>{{au.a_nombres}}</td>   
+                            <td>{{au.a_apellidos}}</td>
+                            <td><button class="btn btn-warning">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                         </tr>
+                   </tbody>
+                   </table>
+
+                   
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+

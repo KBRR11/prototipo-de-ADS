@@ -1,0 +1,90 @@
+<div #alert class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </div>
+<section class="py-5">
+    <div class="row">
+      
+     <!-- Form Elements -->
+      <div class="col-lg-8 mb-5">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="h6 text-uppercase mb-0"><i class="fas fa-book"></i> Agregar un Libro</h3>
+          </div>
+          <div class="card-body">
+            <form class="form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 form-control-label">Título</label>
+                <div class="col-md-9">
+                  <input [(ngModel)]="lib.titulo" name="titulo" type="text" placeholder="Título del libro" id="titulo" class="form-control">
+                </div>
+              </div>
+
+              <div class="line"></div>
+              <div class="form-group row">
+                <label class="col-md-3 form-control-label">Edición</label>
+                <div class="col-md-9">
+                  <input [(ngModel)]="lib.edicion" name="edicion" type="text" placeholder="Edición del libro" id="edicion" class="form-control">
+                </div>
+              </div>
+
+              <div class="line"></div>
+              <div class="form-group row">
+                <label class="col-md-3 form-control-label">Año</label>
+                <div class="col-md-9">
+                  <input [(ngModel)]="lib.anio" name="anio" type="text" placeholder="Año del libro" id="anio" class="form-control">
+                </div>
+              </div>
+
+              <div class="line"></div>
+                      <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Autor</label>
+                        <div class="col-md-9 select mb-3">
+                          <select [(ngModel)]="lib.idautor" name="idautor" id="autor" class="form-control">
+                              <option value="0">Seleccione autor</option>
+                          <option *ngFor="let aut of autores" value="{{aut.idautor}}">{{aut.a_nombres}} {{aut.a_apellidos}}</option>
+                          </select>
+                        </div>
+                    </div>
+
+          <div class="line"></div>
+              <div class="form-group row">
+                <div class="col-md-9 ml-auto">
+                  <button (click)="borrarDatos()" class="btn btn-secondary">Cancelar</button>
+                  <button (click)="obtenerDatos()" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Inline Form-->
+    <div class="col-lg-8 mb-5">                           
+        <div class="card">
+          <div class="card-header">
+            <h3 class="h6 text-uppercase mb-0"><i class="fas fa-users"></i> Agregar Autores</h3>
+          </div>
+          <div class="card-body">
+            <form class="form-inline">
+              <div class="form-group">
+                
+                <input [(ngModel)]="aut.a_nombres" name="a_nombres" id="a_nombres" type="text" placeholder="Nombre" class="mr-3 form-control">
+              </div>
+              <div class="form-group">
+               
+                <input [(ngModel)]="aut.a_apellidos" name="a_apellidos" id="a_apellidos" type="text" placeholder="Apellido" class="mr-3 form-control">
+              </div>
+              <div class="form-group">
+                <button (click)="addAutor()" class="btn btn-primary">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+  </section>
